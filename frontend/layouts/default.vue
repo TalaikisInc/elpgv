@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div>
     <header-component></header-component>
     <nuxt/>
     <footer-component></footer-component>
@@ -21,5 +21,4 @@ export default {
 }
 </script>
 
-<style>
-</style>
+<style src="~/node_modules/element-ui/lib/theme-default/index.css"></style>

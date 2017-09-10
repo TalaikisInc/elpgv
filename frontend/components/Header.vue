@@ -1,37 +1,35 @@
 <template>
   <header>
-    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navToggle" aria-controls="navToggle" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand" :href="baseUrl" :title="title">
-        <img src="~/assets/logo/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
-        {{ title }}
-      </a>
-
-      <div class="collapse navbar-collapse" id="navToggle">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" :href="baseUrl" id="navDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Categories
+    <el-row>
+      <el-col :span="24">
+        <el-menu theme="dark" class="el-menu-demo" mode="horizontal" @select="handleSelect">
+          <el-menu-item index="1">
+            <a class="navbar-brand" :href="baseUrl" :title="title">
+              <img src="~/assets/logo/logo.png" width="30" height="30" alt="Logo">
+              {{ title }}
             </a>
-            <div class="dropdown-menu" aria-labelledby="navDropdown">
-              <a class="dropdown-item" :href="baseUrl + keyword + '/' + cat.slug + '/'" v-for="cat in categories">{{ cat.title }} [{{ cat.post_count }}]</a>
-              <hr />
+          </el-menu-item>
+          <el-submenu index="2">
+            <template slot="title">Categories</template>
+            <el-menu-item v-for="(cat, index) in categories" :index="'2-' + index" key="cats">
+              <a class="dropdown-item" :href="baseUrl + keyword + '/' + cat.slug + '/'">
+                {{ cat.title }} [{{ cat.post_count }}]
+              </a>
+            </el-menu-item>
+            <hr />
+            <el-menu-item index="2-41">
               <strong><a :href="baseUrl + catKey + '/1/'" class="dropdown-item">All categories</a></strong>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" :href="baseUrl" id="navDropdownB" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Trending
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navDropdown">
+            </el-menu-item>
+          </el-submenu>
+          </el-submenu index="3">
+            <template slot="title">Trending</template>
+            <el-menu-item index="3-1">
               <a class="dropdown-item" :href="baseUrl + searchKey + '/keyword/'">Keyword</a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </nav>
+            </el-menu-item>
+          </el-submenu>
+        </el-menu>
+      </el-col>
+    </el-row>
   </header>
 </template>
 
@@ -58,6 +56,9 @@ export default {
       }).catch(e => {
         console.log(e)
       })
+    },
+    handleSelect (key, keyPath) {
+      console.log(key, keyPath)
     }
   },
   mounted () {

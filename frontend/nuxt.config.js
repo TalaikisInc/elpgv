@@ -20,15 +20,11 @@ module.exports = {
     ],
     script: [
       { src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js' },
-      { src: '/js/vue-social-sharing.min.js' },
-      { src: 'https://code.jquery.com/jquery-3.1.1.slim.min.js' },
-      { src: 'https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js' },
-      { src: 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js' }
+      { src: '/js/vue-social-sharing.min.js' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' },
-      { rel: 'stylesheet', href: 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css' }
+      { rel: 'stylesheet', href: 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' }
     ]
   },
   css: [
@@ -36,7 +32,8 @@ module.exports = {
   ],
   plugins: [
     '~plugins/filters.js',
-    '~plugins/axios.js'
+    '~plugins/axios.js',
+    '~plugins/element.js'
   ],
   modules: [
     ['@nuxtjs/component-cache', { maxAge: 1000 * 60 * 60 * 24 }],
