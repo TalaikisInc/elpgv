@@ -1,0 +1,13 @@
+﻿[class*="col-"] {
+    padding: 25px;
+}
+
+.pagination {
+  -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+p {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
