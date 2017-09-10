@@ -8,10 +8,10 @@ const searchPaged = '/' + process.env.SEARCH_KEYWORD + '/:catSlug/page/:page/'
 
 module.exports = {
   head: {
-    title: 'PyGoVue',
+    title: 'ElPGV',
     manifest: {
       name: process.env.SITE_NAME,
-      short_name: 'PyGoVue',
+      short_name: 'ElPGV',
       lang: 'en'
     },
     meta: [
