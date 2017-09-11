@@ -24,7 +24,7 @@ This version uses iView UI (vertical menu).
 
 ## Requirements
 
-Python 3.6, Golang 1.8, Vue 2/ Nuxt, Postgres.
+Python 3.6, Golang 1.8, Node 6.10, Postgres.
 
 ## Setup
 
