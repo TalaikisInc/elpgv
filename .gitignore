@@ -13,7 +13,10 @@ selenium-debug.log
 *.ntvs*
 *.njsproj
 *.sln
-static/
-src/assets/
 *.pyc
 migrations/
+.nuxt/
+static/sw.js
+static/workbox-sw*.jss
+
+#.env allowed for this project, no sensitive data
