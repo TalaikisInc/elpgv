@@ -1,45 +1,45 @@
 <template>
 <div>
-  <ad-component :type="0"></ad-component>
-  <div class="row">
-    <div class="col-sm-3"></div>
-    <div class="col-sm-6">
+  <ad-component></ad-component>
+  <Row :span="20">
+    <Col :span="3"></Col>
+    <Col :span="14">
       <h1>{{ post.Title }}</h1>
-    </div>
-    <div class="col-sm-3"></div>
-  </div>
-  <div class="row">
-    <div class="col-sm-3"></div>
-    <div class="col-sm-6">
+    </Col>
+    <Col :span="3"></Col>
+  </Row>
+  <Row :span="20">
+    <Col :span="3"></Col>
+    <Col :span="14">
       <div v-if="post.Image">
         <a :href="baseUrl + post.Slug+'/'">
-          <img class="img-responsive" :src="imgBaseUrl + post.Image" :alt="post.Title">
+          <img class="img-fluid" :src="imgBaseUrl + post.Image" :alt="post.Title">
         </a>
       </div>
       <div>
-        <a :href="baseUrl + keyword + '/' + post.CategoryID.Slug + '/'">
+        <p><small><a :href="baseUrl + keyword + '/' + post.CategoryID.Slug + '/'">
           {{ post.CategoryID.Title }}
         </a>
-         | {{ post.Date | formatDate }}
+         | {{ post.Date | formatDate }}</small></p>
       </div>
       <p v-if="post.Content">
         {{ post.Content }}
       </p>
       <div>
-        <ad-component :type="0"></ad-component>
+        <ad-component></ad-component>
         <social-sharing :url="baseUrl + post.Slug + '/'" :title="post.Title">
         </social-sharing>
       </div>
-      <div class="col">
+      <Col :span="20">
         <a :href="post.URL">
           <Button type="error">
             Read more...
           </Button>
         </a>
-      </div>
-    </div>
-    <div class="col-sm-3"></div>
-  </div>
+      </Col>
+    </Col>
+    <Col :span="3"></Col>
+  </Row>
 </div>
 </template>
 
@@ -79,3 +79,19 @@ export default {
   }
 }
 </script>
+
+<style>
+.img-fluid {
+  width: 100%;
+}
+
+p {
+    font-size: 2em;
+    font-face: Roboto, Arial;
+}
+
+h1 {
+  font-size: 4em;
+  font-face: Roboto, Arial;
+}
+</style>

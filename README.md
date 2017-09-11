@@ -14,9 +14,13 @@ Elpgv is a 3-part website boilerplate:
 
 In dev!
 
-## UI
+## UI(s)
 
-This version uses Element UI, for Bootstrap 4 version see [pygovue](https://github.com/xenu256/pygovue).
+This version uses iView UI (vertical menu).
+
+* for Bootstrap 4 version see [pygovue](https://github.com/xenu256/pygovue)
+* for Vuetify [tipgv](https://github.com/xenu256/tipgv).
+* horizontal iView ...
 
 ## Requirements
 

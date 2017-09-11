@@ -1,33 +1,33 @@
 <template>
   <div>
     <ad-component></ad-component>
-    <div class="row">
-      <div class="col-sm-12">
+    <Row>
+      <Col :span="20">
         <h1>{{ catTitle }}<span v-if="page > 0">, page {{ page }}</span></h1>
-      </div>
-    </div>
-    <div class="row" v-for="(chunk, index) in chunkPosts">
-      <div class="col-sm-2"></div>
-      <div class="col-sm-4 card" v-for="post in chunk">
-        <div v-if="post.image" class="card-img-top">
-          <a :href="baseUrl + post.slug + '/'">
-            <img class="img-responsive" :src="imgBaseUrl + post.image" :alt="post.title">
-          </a>
-        </div>
-        <div class="card-block">
-          <a :href="baseUrl + keyword + '/' + post.category_id.Slug + '/'">{{ post.category_id.Title }}</a>
-            | {{ post.date | formatDate }}
-        </div>
-        <div  class="card-body">
-          <h2 class="card-title"><a :href="baseUrl + post.slug + '/'">{{ post.title }}</a></h2>
-          <p class="card-text" v-if="post.content">{{ post.content  | truncate }}</p>
-        </div>
-      </div>
-      <div class="col-sm-2"></div>
-      <div v-if="index === (3 || 7)" class="col-12">
+      </Col>
+    </Row>
+    <Row v-for="(chunk, index) in chunkPosts" :key="'p-' + index" style="background:#eee;padding:20px">
+      <Col :span="3"></Col>
+      <Col :span="6" v-for="(post, i) in chunk" :key="index + i">
+        <Card :bordered="false">
+          <div v-if="post.image">
+            <a :href="baseUrl + post.slug + '/'"><img :src="imgBaseUrl + post.image" :alt="post.title" class="img-fluid"></a>
+          </div>
+          <div>
+            <a :href="baseUrl + keyword + '/' + post.category_id.Slug + '/'">{{ post.category_id.Title }}</a>
+              | {{ post.date | formatDate }}
+          </div>
+          <div>
+            <h2><a :href="baseUrl + post.slug + '/'">{{ post.title }}</a></h2>
+            <p v-if="post.content">{{ post.content | truncate }}</p>
+          </div>
+        </Card>
+      </Col>
+      <Col :span="3"></Col>
+      <Col :span="20" v-if="index === (3 || 7)">
         <ad-component></ad-component>
-      </div>
-    </div>
+      </Col>
+    </Row>
     <paginator-component v-once :totalPages="calcPages" :paginatorType="paginatorType" value="" :currentPage="page" :itemsPerPage="itemsPerPage" :totalItems="posts[0].total_posts">
     </paginator-component>
   </div>

@@ -1,5 +1,5 @@
 <template>
-<div>
+  <div>
     <ad-component></ad-component>
     <Row v-for="(chunk, index) in chunkPosts" :key="'p-' + index" style="background:#eee;padding:20px">
       <Col :span="3"></Col>
@@ -19,13 +19,13 @@
         </Card>
       </Col>
       <Col :span="3"></Col>
-      <Col :span="12" v-if="index === (3 || 7)">
+      <Col :span="20" v-if="index === (3 || 7)">
         <ad-component></ad-component>
       </Col>
     </Row>
     <paginator-component v-once :totalPages="calcPages" :paginatorType="paginatorType" value="" :currentPage="page" :itemsPerPage="itemsPerPage" :totalItems="posts[0].total_posts">
     </paginator-component>
-</div>
+  </div>
 </template>
 
 <script>

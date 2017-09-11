@@ -1,6 +1,6 @@
 <template>
-  <Row>
-    <Col :span="12">
+  <Row :span="20">
+    <Col :span="20">
       <adsense
         :ad-client="adClient"
         :ad-slot="adSlot"
