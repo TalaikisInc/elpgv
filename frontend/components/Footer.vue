@@ -38,7 +38,7 @@ export default {
 <style>
 .align-center {
     text-align: center;
-    font-size: 1.1em;
+    font-size: 0.8em;
     padding: 5em 0 5em 0;
     color: #9ea7b4;
   }
