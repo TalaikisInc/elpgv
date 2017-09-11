@@ -12,7 +12,7 @@ Elpgv is a 3-part website boilerplate:
 
 ## Status
 
-In dev!
+Needs mobile improvements, social sharing component isn't displayed, some conflict probably.
 
 ## UI(s)
 
