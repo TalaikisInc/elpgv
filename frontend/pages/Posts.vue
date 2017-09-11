@@ -1,16 +1,18 @@
 <template>
   <div>
     <ad-component></ad-component>
-    <Row v-for="(chunk, index) in chunkPosts" :key="'p-' + index" style="background:#eee;padding:20px">
-      <Col :span="3"></Col>
-      <Col :span="6" v-for="(post, i) in chunk" :key="index + i">
+    <Row v-for="(chunk, index) in chunkPosts" :key="'p-' + index" class="posts-row">
+      <Col :span="2"></Col>
+      <Col :span="8" v-for="(post, i) in chunk" :key="index + i" class="posts-col">
         <Card :bordered="false">
           <div v-if="post.image">
             <a :href="baseUrl + post.slug + '/'"><img :src="imgBaseUrl + post.image" :alt="post.title" class="img-fluid"></a>
           </div>
           <div>
+            <p><small>
             <a :href="baseUrl + keyword + '/' + post.category_id.Slug + '/'">{{ post.category_id.Title }}</a>
               | {{ post.date | formatDate }}
+            </small></p>
           </div>
           <div>
             <h2><a :href="baseUrl + post.slug + '/'">{{ post.title }}</a></h2>
@@ -18,7 +20,7 @@
           </div>
         </Card>
       </Col>
-      <Col :span="3"></Col>
+      <Col :span="2"></Col>
       <Col :span="20" v-if="index === (3 || 7)">
         <ad-component></ad-component>
       </Col>
@@ -80,5 +82,24 @@ export default {
 <style>
 .img-fluid {
   width: 100%;
+}
+
+.posts-row {
+  background: #eee;
+  padding: 2em;
+}
+
+.posts-col {
+  padding: 1em;
+}
+
+p {
+    font-size: 1.5em;
+    font-face: Roboto, Arial;
+}
+
+h2 {
+  font-size: 2.5em;
+  font-face: Roboto, Arial;
 }
 </style>

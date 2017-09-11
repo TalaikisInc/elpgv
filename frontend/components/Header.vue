@@ -3,7 +3,7 @@
           <Menu name="1" width="auto" class="dark">
             <div class="layout-logo-center">
               <a :href="baseUrl" :title="title">
-                <img src="~/assets/logo/logo.png" width="60" height="60" :alt="title">
+                <img src="~/assets/logo/logo.png" :width="spanLeft < 5 ? '40px' : '90px'" :height="spanLeft < 5 ? '40px' : '90px'" :alt="title">
               </a>
             </div>
             <MenuItem :name="'1-' + index" v-for="(cat, index) in categories" :index="'1-' + index" :key="'1-' + index">
@@ -79,7 +79,7 @@ export default {
 <style scoped>
 .layout-logo-center {
   width: 90%;
-  height: 60px;
+  height: 5em;
   border-radius: 3px;
   display: block;
   margin: 25px auto;

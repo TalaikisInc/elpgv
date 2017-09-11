@@ -1,30 +1,22 @@
 <template>
-<div class="row align-items-center">
-  <div class="col-sm-3"></div>
-  <div class="col-sm-6">
-    <ul class="pagination" v-if="paginatorType === 0">
-      <li v-for="n in paginationRange" :class="activePage(n)">
-        <a :href="baseUrl + 'page/' + n + '/'" @click="pageChanged(n)" class="page-link">{{ n }}</a>
-      </li>
-    </ul>
-    <ul class="pagination" v-if="paginatorType === 1">
-      <li v-for="n in paginationRange" :class="activePage(n)">
-        <a :href="baseUrl + keyword + '/' + value + '/page/' + n + '/'" @click="pageChanged(n)" class="page-link">{{ n }}</a>
-      </li>
-    </ul>
-    <ul class="pagination" v-if="paginatorType === 2">
-      <li v-for="n in paginationRange" :class="activePage(n)">
-        <a :href="baseUrl + catKey + '/' + n + '/'" @click="pageChanged(n)" class="page-link">{{ n }}</a>
-      </li>
-    </ul>
-    <ul class="pagination" v-if="paginatorType === 3">
-      <li v-for="n in paginationRange" :class="activePage(n)">
-        <a :href="baseUrl + searchKey + '/' + value + '/page/' + n + '/'" @click="pageChanged(n)" class="page-link">{{ n }}</a>
-      </li>
-    </ul>
-  </div>
-  <div class="col-sm-3"></div>
-</div>
+<Row :span="20">
+  <Col :span="3"></Col>
+  <Col :span="14" class="align-center">
+    <div class="pagination" v-if="paginatorType === 0">
+      <a v-for="n in paginationRange" :class="activePage(n)" :href="baseUrl + 'page/' + n + '/'" @click="pageChanged(n)" class="page-link">{{ n }}</a>
+    </div>
+    <div class="pagination" v-if="paginatorType === 1">
+      <a v-for="n in paginationRange" :class="activePage(n)" :href="baseUrl + keyword + '/' + value + '/page/' + n + '/'" @click="pageChanged(n)" class="page-link">{{ n }}</a>
+    </div>
+    <div class="pagination" v-if="paginatorType === 2">
+      <a v-for="n in paginationRange" :class="activePage(n)" :href="baseUrl + catKey + '/' + n + '/'" @click="pageChanged(n)" class="page-link">{{ n }}</a>
+    </div>
+    <div class="pagination" v-if="paginatorType === 3">
+      <a v-for="n in paginationRange" :class="activePage(n)" :href="baseUrl + searchKey + '/' + value + '/page/' + n + '/'" @click="pageChanged(n)" class="page-link">{{ n }}</a>
+    </div>
+  </Col>
+  <Col :span="3"></Col>
+</Row>
 </template>
 
 <script>
@@ -99,4 +91,24 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+.pagination {
+  display: block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: #de47ac;
+  color: #fff;
+}
+
+.align-center {
+  text-align: center;
+}
+</style>
