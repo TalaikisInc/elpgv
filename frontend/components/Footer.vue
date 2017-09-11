@@ -1,8 +1,8 @@
 <template>
     <footer>
-        <div class="row align-items-center">
-            <div class="col-sm-3"></div>
-            <div class="col-sm-6 text-center">
+        <Row type="flex">
+            <Col :span="3"></Col>
+            <Col :span="6" class="align-center">
                 <div>
                     <a :href="baseUrl"><img class="img-responsive" src="~/assets/logo/logo.png" :alt="logoAlt"></a>
                 </div>
@@ -14,9 +14,9 @@
                         Developed by <a href="https://talaikis.com">Talaikis Inc.</a></p>
                     </address>					
                 </div>
-            </div>
-            <div class="col-sm-3"></div>
-        </div>
+            </Col>
+            <Col :span="3"></Col>
+        </Row>
     </footer>
 </template>
 
@@ -35,4 +35,11 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+.align-center {
+    text-align: center;
+    font-size: 1.1em;
+    padding: 5em 0 5em 0;
+    color: #9ea7b4;
+  }
+</style>

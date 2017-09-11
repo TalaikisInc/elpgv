@@ -24,16 +24,18 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' }
+      { rel: 'stylesheet', href: 'https://unpkg.com/iview/dist/styles/iview.css' },
+      { rel: 'stylesheet', href: 'https://unpkg.com/iview/dist/iview.min.js' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto' }
     ]
   },
-  css: [
-    '@/assets/css/main.css'
-  ],
   plugins: [
     '~plugins/filters.js',
     '~plugins/axios.js',
-    '~plugins/element.js'
+    '~plugins/iview.js'
+  ],
+  css: [
+    '@/assets/css/index.less'
   ],
   modules: [
     ['@nuxtjs/component-cache', { maxAge: 1000 * 60 * 60 * 24 }],

@@ -31,8 +31,10 @@
         </social-sharing>
       </div>
       <div class="col">
-        <a :href="post.URL" class="btn btn-danger btn-lg pull-right" role="button" aria-disabled="true">
-          Read more...
+        <a :href="post.URL">
+          <Button type="error">
+            Read more...
+          </Button>
         </a>
       </div>
     </div>
