@@ -57,7 +57,8 @@ module.exports = {
     TWITTER_HANDLE: process.env.TWITTER_HANDLE,
     FACEBOOK_HANDLE: process.env.FACEBOOK_HANDLE,
     KEYWORD: process.env.KEYWORD,
-    CATEGORIES_KEY: process.env.CATEGORIES_KEY
+    CATEGORIES_KEY: process.env.CATEGORIES_KEY,
+    SEARCH_KEYWORD: process.env.SEARCH_KEYWORD
   },
   router: {
     extendRoutes (routes, resolve) {

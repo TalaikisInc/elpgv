@@ -30,7 +30,7 @@
         <ad-component></ad-component>
       </Col>
     </Row>
-    <paginator-component v-once :totalPages="calcPages" :paginatorType="paginatorType" value="" :currentPage="page" :itemsPerPage="itemsPerPage" :totalItems="posts[0].total_posts">
+    <paginator-component v-once :totalPages="calcPages" :paginatorType="paginatorType" :value="catSlug" :currentPage="page" :itemsPerPage="itemsPerPage" :totalItems="posts[0].total_posts">
     </paginator-component>
   </div>
 </template>
