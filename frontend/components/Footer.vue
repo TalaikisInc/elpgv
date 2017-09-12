@@ -4,7 +4,7 @@
             <Col :span="3"></Col>
             <Col :span="6" class="align-center">
                 <div>
-                    <a :href="baseUrl"><img class="img-responsive" src="~/assets/logo/logo.png" :alt="logoAlt"></a>
+                    <a :href="baseUrl"><img class="img-fluid" src="~/assets/logo/logo.png" :alt="siteName"></a>
                 </div>
                 <div>
                     <p><a :href="'https://twitter.com/' + twHandle"><i class="fa fa-twitter"></i></a>&nbsp;
@@ -26,7 +26,6 @@ export default {
   data () {
     return {
       baseUrl: process.env.BASE_URL,
-      logoAlt: process.env.SITE_NAME,
       twHandle: process.env.TWITTE_HANDLE,
       fbHandle: process.env.FACEBOOK_HANDLE,
       siteName: process.env.SITE_NAME
