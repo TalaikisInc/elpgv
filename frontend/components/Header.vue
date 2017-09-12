@@ -1,39 +1,39 @@
 <template>
 <Col :span="spanLeft" class="layout-menu-left">
-          <Menu name="1" width="auto" class="dark">
-            <div class="layout-logo-center">
-              <a :href="baseUrl" :title="title">
-                <img src="~/assets/logo/logo.png" :width="spanLeft < 5 ? '40px' : '90px'" :height="spanLeft < 5 ? '40px' : '90px'" :alt="title">
-              </a>
-            </div>
-            <MenuItem :name="'1-' + index" v-for="(cat, index) in categories" :index="'1-' + index" :key="'1-' + index">
-              <span class="layout-text">
-                <a :href="baseUrl + keyword + '/' + cat.slug + '/'">
-                  <Icon type="ios-keypad" :size="iconSize" :color="iconColor"></Icon>
-                  {{ cat.title }} [{{ cat.post_count }}]
-                </a>
-              </span>
-            </MenuItem>
-            <MenuItem name="40" class="divided">
-              <span class="layout-text" >
-                <strong>
-                  <a :href="baseUrl + catKey + '/1/'">
-                    <Icon type="ios-keypad" :size="iconSize" :color="iconColor"></Icon>
-                    All categories
-                  </a>
-                </strong>
-              </span>
-            </MenuItem>
-            <MenuItem name="41" class="divided">
-              <span class="layout-text">
-                <a :href="baseUrl + searchKey + '/keyword/'">
-                  <Icon type="ios-keypad" :size="iconSize" :color="iconColor"></Icon>
-                  Keyword
-                </a>
-              </span>
-            </MenuItem>
-          </Menu>
-        </Col>
+  <Menu name="1" width="auto" class="dark">
+    <div class="layout-logo-center">
+      <a :href="baseUrl" :title="title">
+        <img src="~/assets/logo/logo.png" :width="spanLeft < 5 ? '40px' : '90px'" :height="spanLeft < 5 ? '40px' : '90px'" :alt="title">
+      </a>
+    </div>
+    <MenuItem :name="'1-' + index" v-for="(cat, index) in categories" :index="'1-' + index" :key="'1-' + index">
+      <span class="layout-text">
+        <a :href="baseUrl + keyword + '/' + cat.slug + '/'">
+          <Icon type="ios-keypad" :size="iconSize" :color="iconColor"></Icon>
+          {{ cat.title }} [{{ cat.post_count }}]
+        </a>
+      </span>
+    </MenuItem>
+    <MenuItem name="40" class="divided">
+      <span class="layout-text" >
+        <strong>
+          <a :href="baseUrl + catKey + '/1/'">
+            <Icon type="ios-keypad" :size="iconSize" :color="iconColor"></Icon>
+            All categories
+          </a>
+        </strong>
+      </span>
+    </MenuItem>
+    <MenuItem name="41" class="divided">
+      <span class="layout-text">
+        <a :href="baseUrl + searchKey + '/keyword/'">
+          <Icon type="ios-keypad" :size="iconSize" :color="iconColor"></Icon>
+          Keyword
+        </a>
+      </span>
+    </MenuItem>
+  </Menu>
+</Col>
 </template>
 
 <script>

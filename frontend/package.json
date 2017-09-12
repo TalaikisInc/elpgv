@@ -1,9 +1,9 @@
 {
-  "name": "PyGoVue",
+  "name": "ElPGV",
   "version": "1.0.0",
-  "description": "PyGoVue Frontend",
+  "description": "ElPGV Frontend",
   "author": "Tadas Talaikis <talaikis.tadas@gmail.com>",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",

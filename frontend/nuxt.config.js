@@ -20,7 +20,7 @@ module.exports = {
     ],
     script: [
       { src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js' },
-      { src: '/js/vue-social-sharing.min.js' }
+      { src: '~/static/js/vue-social-sharing.min.js' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
