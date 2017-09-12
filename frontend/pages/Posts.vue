@@ -78,28 +78,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.img-fluid {
-  width: 100%;
-}
-
-.posts-row {
-  background: #eee;
-  padding: 2em;
-}
-
-.posts-col {
-  padding: 1em;
-}
-
-p {
-    font-size: 1.5em;
-    font-face: Roboto, Arial;
-}
-
-h2 {
-  font-size: 2.5em;
-  font-face: Roboto, Arial;
-}
-</style>

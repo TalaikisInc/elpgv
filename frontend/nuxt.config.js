@@ -35,7 +35,8 @@ module.exports = {
     '~plugins/iview.js'
   ],
   css: [
-    '@/assets/css/index.less'
+    '@/assets/css/index.less',
+    '@/assets/css/main.css'
   ],
   modules: [
     ['@nuxtjs/component-cache', { maxAge: 1000 * 60 * 60 * 24 }],
