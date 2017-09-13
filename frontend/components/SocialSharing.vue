@@ -1,4 +1,6 @@
 <template>
+<Row>
+<Col :span="12" class="posts-col">
   <social-sharing :url="url" :title="title" inline-template>
   <div>
     <network network="facebook">
@@ -18,6 +20,8 @@
     </network>
   </div>
 </social-sharing>
+</Col>
+</Row>
 </template>
 
 <script>

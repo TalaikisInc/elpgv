@@ -4,7 +4,7 @@
             <Col :span="3"></Col>
             <Col :span="6" class="align-center">
                 <div>
-                    <a :href="baseUrl"><img class="img-fluid" src="~/assets/logo/logo.png" :alt="siteName"></a>
+                    <a :href="baseUrl"><img src="~/assets/logo/logo.png" width="50" height="50" :alt="siteName"></a>
                 </div>
                 <div>
                     <p><a :href="'https://twitter.com/' + twHandle"><i class="fa fa-twitter"></i></a>&nbsp;
