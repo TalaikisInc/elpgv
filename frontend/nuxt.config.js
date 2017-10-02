@@ -20,12 +20,12 @@ module.exports = {
     ],
     script: [
       { src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js' },
+      { src: 'https://unpkg.com/iview/dist/iview.min.js' },
       { src: '~/static/js/vue-social-sharing.min.js' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://unpkg.com/iview/dist/styles/iview.css' },
-      { rel: 'stylesheet', href: 'https://unpkg.com/iview/dist/iview.min.js' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto' },
       { rel: 'stylesheet', href: 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' }
     ]
