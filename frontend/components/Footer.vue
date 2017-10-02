@@ -26,7 +26,7 @@ export default {
   data () {
     return {
       baseUrl: process.env.BASE_URL,
-      twHandle: process.env.TWITTE_HANDLE,
+      twHandle: process.env.TWITTER_HANDLE,
       fbHandle: process.env.FACEBOOK_HANDLE,
       siteName: process.env.SITE_NAME
     }
