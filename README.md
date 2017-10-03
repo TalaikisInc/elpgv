@@ -8,7 +8,7 @@ Elpgv is a 3-part website boilerplate:
 
 ## Demo(s) in play
 
-* [Famous quotes](http://quotes.talaikis.com/) [[repo(https://github.com/xenu256/quotes)]
+* [Famous quotes](http://quotes.talaikis.com/) [[repo](https://github.com/xenu256/quotes)]
 
 ## Status
 
