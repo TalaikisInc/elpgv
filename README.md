@@ -8,7 +8,7 @@ Elpgv is a 3-part website boilerplate:
 
 ## Demo(s) in play
 
-* ...
+* [Famous quotes](http://quotes.talaikis.com/) [[repo(https://github.com/xenu256/quotes)]
 
 ## Status
 
@@ -20,6 +20,7 @@ This version uses iView UI (vertical menu).
 
 * for Bootstrap 4 version see [pygovue](https://github.com/xenu256/pygovue)
 * for Vuetify [tipgv](https://github.com/xenu256/tipgv).
+* for Bulma [tipgv](https://github.com/xenu256/bulma_pgv).
 * horizontal iView ...
 
 ## Requirements
