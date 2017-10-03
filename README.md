@@ -20,7 +20,7 @@ This version uses iView UI (vertical menu).
 
 * for Bootstrap 4 version see [pygovue](https://github.com/xenu256/pygovue)
 * for Vuetify [tipgv](https://github.com/xenu256/tipgv).
-* for Bulma [tipgv](https://github.com/xenu256/bulma_pgv).
+* for Bulma [bulma_pgv](https://github.com/xenu256/bulma_pgv).
 * horizontal iView ...
 
 ## Requirements
